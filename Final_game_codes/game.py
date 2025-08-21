@@ -10,7 +10,7 @@ pygame.init()
 
 
 # Disable audio in headless mode
-os.environ["SDL_AUDIODRIVER"] = "dummy"
+#os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 try:
     pygame.mixer.init()
