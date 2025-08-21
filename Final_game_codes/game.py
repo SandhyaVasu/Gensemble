@@ -7,8 +7,15 @@ import math
 from collections import defaultdict
 
 pygame.init()
-pygame.mixer.init()
-pygame.mixer.music.set_volume(1.0)
+
+
+# Disable audio in headless mode
+os.environ["SDL_AUDIODRIVER"] = "dummy"
+
+try:
+    pygame.mixer.init()
+except pygame.error:
+    print("Audio not available, continuing without sound")
 
 # Screen config
 WIDTH, HEIGHT = 1000, 750
