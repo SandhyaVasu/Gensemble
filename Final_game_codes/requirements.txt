@@ -1,7 +1,2 @@
 pygame
 streamlit
-random
-sys
-time
-math
-collections 
